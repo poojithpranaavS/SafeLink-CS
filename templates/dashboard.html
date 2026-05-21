@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+
+<h1>Visitor Logs</h1>
+
+<table border="1">
+
+<tr>
+    <th>IP</th>
+    <th>City</th>
+    <th>Region</th>
+    <th>Country</th>
+    <th>ISP</th>
+    <th>Browser</th>
+    <th>OS</th>
+    <th>Device</th>
+    <th>Time</th>
+</tr>
+
+{% for visitor in visitors %}
+<tr>
+    <td>{{ visitor[1] }}</td>
+    <td>{{ visitor[2] }}</td>
+    <td>{{ visitor[3] }}</td>
+    <td>{{ visitor[4] }}</td>
+    <td>{{ visitor[5] }}</td>
+    <td>{{ visitor[6] }}</td>
+    <td>{{ visitor[7] }}</td>
+    <td>{{ visitor[8] }}</td>
+    <td>{{ visitor[9] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

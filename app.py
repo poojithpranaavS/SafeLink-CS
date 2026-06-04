@@ -1,12 +1,14 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify, Response
 from flask_cors import CORS
 import sqlite3
 import requests
+import csv
+import io
 from user_agents import parse
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)   
+CORS(app)
 
 # DATABASE SETUP
 def init_db():
@@ -115,6 +117,8 @@ def dashboard():
         'dashboard.html',
         visitors=visitors
     )
+
+# API
 @app.route("/api/visitors")
 def get_visitors():
 
@@ -150,6 +154,60 @@ def get_visitors():
     conn.close()
 
     return jsonify(visitors)
+
+# CSV EXPORT
+@app.route("/export-csv")
+def export_csv():
+
+    conn = sqlite3.connect("visitors.db")
+
+    c = conn.cursor()
+
+    c.execute("""
+        SELECT
+        ip,
+        city,
+        region,
+        country,
+        browser,
+        os,
+        device,
+        time
+        FROM visitors
+        ORDER BY id DESC
+    """)
+
+    rows = c.fetchall()
+
+    conn.close()
+
+    output = io.StringIO()
+
+    writer = csv.writer(output)
+
+    writer.writerow([
+        "IP Address",
+        "City",
+        "Region",
+        "Country",
+        "Browser",
+        "OS",
+        "Device",
+        "Time"
+    ])
+
+    writer.writerows(rows)
+
+    response = Response(
+        output.getvalue(),
+        mimetype="text/csv"
+    )
+
+    response.headers["Content-Disposition"] = (
+        "attachment; filename=visitor_report.csv"
+    )
+
+    return response
 
 if __name__ == '__main__':
     app.run(debug=True)

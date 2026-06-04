@@ -53,7 +53,7 @@ A cybersecurity-inspired visitor intelligence platform that tracks visitor activ
 - Real-time Updates
 - Admin Authentication
 - Advanced Threat Scoring
-- Interactive Charts
+- Interactive Charts 
 - Cloud Deployment
 
 ## Project Structure

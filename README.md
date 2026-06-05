@@ -1,6 +1,8 @@
-<img width="1887" height="1039" alt="image" src="https://github.com/user-attachments/assets/a9519a59-6d00-44b8-a347-4faad7b01d28" />
-<img width="1809" height="920" alt="image" src="https://github.com/user-attachments/assets/98b276c0-8af8-4f5d-bbe1-3457ecbfc651" />
-# SafeLink-CS
+<img width="1870" height="814" alt="image" src="https://github.com/user-attachments/assets/4fd419c0-8960-4f0b-bbbd-6c54c1ba7daa" />
+<img width="1796" height="1032" alt="image" src="https://github.com/user-attachments/assets/4cbcbd03-257e-4aba-974e-a5ccac4ac031" />
+<img width="1641" height="513" alt="image" src="https://github.com/user-attachments/assets/7415695c-9fb0-4073-9c61-88b091859cfe" />
+
+## SafeLink-CS
 
 A cybersecurity-inspired visitor intelligence platform that tracks visitor activity, analyzes browsing patterns, calculates threat scores, and provides DSDA-based analytics through an interactive dashboard.
 
@@ -18,6 +20,9 @@ A cybersecurity-inspired visitor intelligence platform that tracks visitor activ
 - Country Analytics
 - Peak Activity Analysis
 - Risk Prediction
+- Visitor Activity Graph
+- Interactive Data Visualization
+- Charts & Graph Analytics
 - CSV Report Export
 - Interactive Dashboard
 
@@ -27,6 +32,7 @@ A cybersecurity-inspired visitor intelligence platform that tracks visitor activ
 - React.js
 - Vite
 - Tailwind CSS
+- Recharts
 
 ### Backend
 - Flask

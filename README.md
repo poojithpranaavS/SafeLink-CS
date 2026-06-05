@@ -4,6 +4,9 @@
 
 <img width="1641" height="513" alt="image" src="https://github.com/user-attachments/assets/7415695c-9fb0-4073-9c61-88b091859cfe" />
 
+<img width="480" height="174" alt="image" src="https://github.com/user-attachments/assets/93ef2dcb-5dcc-4019-a097-3c3024e77317" />
+A report on the activity can be downloaded by clicking download option 
+
 ## SafeLink-CS
 
 A cybersecurity-inspired visitor intelligence platform that tracks visitor activity, analyzes browsing patterns, calculates threat scores, and provides DSDA-based analytics through an interactive dashboard.
